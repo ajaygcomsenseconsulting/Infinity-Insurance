@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.0</version>
+        <version>3.2.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.infinityinsurance</groupId>
-    <artifactId>infinity-insurance</artifactId>
+    <artifactId>infinity-insurance-user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Infinity Insurance</name>
-    <description>Backend for Infinity Insurance aggregator system</description>
+    <name>Infinity Insurance User Service</name>
+    <description>Backend service for Infinity Insurance - User Service</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version> <!-- Specify the Spring Cloud version -->
@@ -86,30 +86,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-activemq</artifactId>
         </dependency>
-        <dependency>
-            <groupId>io.github.resilience4j</groupId>
-            <artifactId>resilience4j-spring-boot2</artifactId>
-            <version>1.7.0</version>
-        </dependency>
-        
-        <!-- Spring Cloud Gateway -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
-        
-        <!-- Spring Cloud Starter Circuit Breaker (Optional, for resiliency) -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
-        </dependency>
-        
-        <!-- Resilience4J (Optional, for circuit breaker) -->
-        <dependency>
-            <groupId>io.github.resilience4j</groupId>
-            <artifactId>resilience4j-spring-boot2</artifactId>
-            <version>1.7.0</version>
-        </dependency>
         
         <!-- JWT Dependency -->
         <dependency>
@@ -117,7 +93,12 @@
             <artifactId>java-jwt</artifactId>
             <version>3.18.1</version>
         </dependency>
-        
+
+        <!-- Eureka Client Dependency -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
